@@ -33,9 +33,6 @@ howManyMovies(movies);
 
 
 
-
-
-
 // Iteration 3: All scores average - Get the average of all scores with 2 decimals
 function scoresAverage(movies) {
   if(movies.length === 0){
@@ -62,11 +59,17 @@ function scoresAverage(movies) {
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
 function dramaMoviesScore(movies) {
+  
 
-  const newDrama = movies.filter((currentElement) => {
-    return(currentElement.genre === 'Drama' && currentElement.score)
-  });
- console.log(newDrama);
+  const newDrama = movies.map((currentElement) => currentElement.genre)
+
+  const newScoreDrama = newDrama.filter((currentElement) => currentElement.score)
+    
+  
+
+  console.log(newDrama, newScoreDrama);
+
+
   //const  dramaReduc = newDrama.reduce((a,b) => a+b)
 
   //const dramaMedia = dramaReduc / newDrama.length;
